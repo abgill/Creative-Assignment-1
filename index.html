@@ -22,7 +22,7 @@
         <h1>Retro Gamer</h1>
         <img src="./gamepad.png" width="150" height="150">
        <hr>
-       <h3>Reviewing your favorite clasics</h3>
+       <h3>Reliving Your Favorite Classics</h3>
     </div>
     </div>
 
@@ -31,14 +31,16 @@
     <h2 class="bodyHeading">Select Your Platform</h2>
 </div>
 <div class="row text-center">
-    <button class="btn btn-default">N64</button>
-    <button class="btn btn-default">SNES</button>
-    <button class="btn btn-default">PS1</button>
+    <button id="n64Btn" class="btn btn-default">N64</button>
+    <button id="snesBtn" class="btn btn-default">SNES</button>
+    <button id="ps1Btn" class="btn btn-default">PS1</button>
 </div>
 <div class="row">
-    <div id="testdiv">
+    <div id="platformContent">
     </div>
 </div>
+
+<hr>
 
   <div class="footer" style="background-color: #d6cbd9">
         <div class="container">
@@ -47,7 +49,18 @@
    </div>
 
 <script>
-    $("#testdiv").load("test.html");
+    $(document).ready(function() {
+        $("#n64Btn").click(function(){
+            $("#platformContent").load("n64.html");
+
+        });
+        $("#ps1Btn").click(function(){
+            $("#platformContent").load("ps1.html");
+        });
+        $("#snesBtn").click(function(){
+            $("#platformContent").load("snes.html");
+        });
+    });
 </script>
 </body>
 </html>
