@@ -22,4 +22,7 @@ h3{
 .platformTitle{
     background-color: #4278d6;
 }
+p.console-paragraph {
+    line-height: 200%;
+}
 
